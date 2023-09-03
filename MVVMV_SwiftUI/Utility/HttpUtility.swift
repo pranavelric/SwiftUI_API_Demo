@@ -10,6 +10,10 @@ import Foundation
 
 final class HttpUtility{
     
+    static let shared = HttpUtility()
+    private init(){}
+
+    
     func getData<T: Decodable>(requestUrl:URL, requestType: T.Type,completionHandler: @escaping(_ result: T?)-> Void){
             URLSession.shared.dataTask(with: requestUrl){ (data,response,error) in
                 
