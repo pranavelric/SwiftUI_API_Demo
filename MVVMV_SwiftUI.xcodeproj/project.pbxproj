@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E6FCA952AA44E6200E7BC6D /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6FCA942AA44E6200E7BC6D /* LoginValidation.swift */; };
 		1EF3769F2AA3A0CA00C5E700 /* MVVMV_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF3769E2AA3A0CA00C5E700 /* MVVMV_SwiftUIApp.swift */; };
 		1EF376A12AA3A0CA00C5E700 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF376A02AA3A0CA00C5E700 /* ContentView.swift */; };
 		1EF376A32AA3A0CB00C5E700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF376A22AA3A0CB00C5E700 /* Assets.xcassets */; };
 		1EF376A62AA3A0CB00C5E700 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF376A52AA3A0CB00C5E700 /* Preview Assets.xcassets */; };
+		1EF376B72AA3A16E00C5E700 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF376B62AA3A16E00C5E700 /* LoginResponse.swift */; };
+		1EF376B92AA3A24C00C5E700 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF376B82AA3A24C00C5E700 /* LoginRequest.swift */; };
+		1EF376BB2AA3A69900C5E700 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF376BA2AA3A69900C5E700 /* HttpUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E6FCA942AA44E6200E7BC6D /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		1EF3769B2AA3A0CA00C5E700 /* MVVMV_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMV_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF3769E2AA3A0CA00C5E700 /* MVVMV_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMV_SwiftUIApp.swift; sourceTree = "<group>"; };
 		1EF376A02AA3A0CA00C5E700 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EF376A22AA3A0CB00C5E700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EF376A52AA3A0CB00C5E700 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1EF376B62AA3A16E00C5E700 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		1EF376B82AA3A24C00C5E700 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		1EF376BA2AA3A69900C5E700 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,12 @@
 		1EF3769D2AA3A0CA00C5E700 /* MVVMV_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				1EF376B22AA3A13200C5E700 /* Views */,
+				1EF376B12AA3A12C00C5E700 /* ViewModel */,
+				1EF376B02AA3A12500C5E700 /* Validation */,
+				1EF376AF2AA3A11D00C5E700 /* Utility */,
+				1EF376AE2AA3A11500C5E700 /* Resource */,
+				1EF376AC2AA3A10100C5E700 /* Models */,
 				1EF3769E2AA3A0CA00C5E700 /* MVVMV_SwiftUIApp.swift */,
 				1EF376A02AA3A0CA00C5E700 /* ContentView.swift */,
 				1EF376A22AA3A0CB00C5E700 /* Assets.xcassets */,
@@ -65,6 +79,68 @@
 				1EF376A52AA3A0CB00C5E700 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1EF376AC2AA3A10100C5E700 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EF376B42AA3A15400C5E700 /* Request */,
+				1EF376B32AA3A14B00C5E700 /* Response */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EF376AE2AA3A11500C5E700 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1EF376AF2AA3A11D00C5E700 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1EF376BA2AA3A69900C5E700 /* HttpUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		1EF376B02AA3A12500C5E700 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				1E6FCA942AA44E6200E7BC6D /* LoginValidation.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		1EF376B12AA3A12C00C5E700 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1EF376B22AA3A13200C5E700 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1EF376B32AA3A14B00C5E700 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				1EF376B62AA3A16E00C5E700 /* LoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		1EF376B42AA3A15400C5E700 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				1EF376B82AA3A24C00C5E700 /* LoginRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF376BB2AA3A69900C5E700 /* HttpUtility.swift in Sources */,
 				1EF376A12AA3A0CA00C5E700 /* ContentView.swift in Sources */,
 				1EF3769F2AA3A0CA00C5E700 /* MVVMV_SwiftUIApp.swift in Sources */,
+				1EF376B72AA3A16E00C5E700 /* LoginResponse.swift in Sources */,
+				1E6FCA952AA44E6200E7BC6D /* LoginValidation.swift in Sources */,
+				1EF376B92AA3A24C00C5E700 /* LoginRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
