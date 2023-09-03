@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0532482AA497A7005409BA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0532472AA497A7005409BA /* HomeView.swift */; };
 		1E6FCA952AA44E6200E7BC6D /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6FCA942AA44E6200E7BC6D /* LoginValidation.swift */; };
 		1E6FCA972AA4501800E7BC6D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6FCA962AA4501800E7BC6D /* LoginViewModel.swift */; };
 		1E6FCA992AA4508500E7BC6D /* LoginResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6FCA982AA4508400E7BC6D /* LoginResource.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E0532472AA497A7005409BA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1E6FCA942AA44E6200E7BC6D /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		1E6FCA962AA4501800E7BC6D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1E6FCA982AA4508400E7BC6D /* LoginResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResource.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				1EF376A02AA3A0CA00C5E700 /* ContentView.swift */,
+				1E0532472AA497A7005409BA /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				1EF376BB2AA3A69900C5E700 /* HttpUtility.swift in Sources */,
 				1E6FCA9C2AA4512A00E7BC6D /* ApiEndpoints.swift in Sources */,
 				1EF376A12AA3A0CA00C5E700 /* ContentView.swift in Sources */,
+				1E0532482AA497A7005409BA /* HomeView.swift in Sources */,
 				1EF3769F2AA3A0CA00C5E700 /* MVVMV_SwiftUIApp.swift in Sources */,
 				1EF376B72AA3A16E00C5E700 /* LoginResponse.swift in Sources */,
 				1E6FCA952AA44E6200E7BC6D /* LoginValidation.swift in Sources */,

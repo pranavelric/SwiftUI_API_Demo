@@ -12,11 +12,12 @@ struct LoginResource{
     func authenticate(loginRequest: LoginRequest, completionHandler: @escaping(_ result: LoginResponse?)-> Void){
         
         let loginUrl = URL(string: ApiEndpoints.login)!
-
+        print(loginUrl)
         
         do{
             let loginPostBody = try JSONEncoder().encode(loginRequest)
             HttpUtility.shared.postData(requestUrl: loginUrl, requestBody: loginPostBody, resultType: LoginResponse.self){ response in
+               print("sadsadasd")
                 _ = completionHandler(response)
             }
         }

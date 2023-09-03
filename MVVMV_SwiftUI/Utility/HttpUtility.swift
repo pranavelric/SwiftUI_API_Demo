@@ -17,7 +17,7 @@ final class HttpUtility{
     func getData<T: Decodable>(requestUrl:URL, requestType: T.Type,completionHandler: @escaping(_ result: T?)-> Void){
             URLSession.shared.dataTask(with: requestUrl){ (data,response,error) in
                 
-                if(error != nil && data != nil && data?.count != 0){
+                if(error == nil && data != nil && data?.count != 0){
                     let decoder = JSONDecoder()
                     do{
                         let result  = try decoder.decode(T.self, from: data!)
@@ -36,13 +36,14 @@ final class HttpUtility{
         urlRequest.httpMethod = "POST"
         urlRequest.httpBody   = requestBody
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
         URLSession.shared.dataTask(with: urlRequest) { (data,response,error) in
-            if( error != nil && data != nil && data?.count != 0){
+
+            if( error == nil && data != nil && data?.count != 0){
                          let decoder = JSONDecoder()
                          
                          do{
                              let result =  try decoder.decode(T.self, from: data!)
-                             let jsonDecoder = JSONDecoder()
                              completionHandler(result)
                          }
                          catch let error{
