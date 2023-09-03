@@ -7,6 +7,11 @@
 
 import Foundation
 
+
+//username: 'kminchelle',
+//password: '0lelplR',
+
+
 struct ApiEndpoints{
     static let login = "https://dummyjson.com/auth/login"
        static let employees = "https://dummyjson.com/users"

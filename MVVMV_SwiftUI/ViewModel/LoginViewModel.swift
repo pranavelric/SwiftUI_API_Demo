@@ -7,23 +7,27 @@
 
 import Foundation
 
+struct LoginDataModel{
+     var errorMessage: String = String()
+     var userName: String = String()
+     var userPassword: String = String()
+     var navigate: Bool = false
+     var isPresentingErrorAlert: Bool = false
+}
+
 class LoginViewModel: ObservableObject{
     
-    @Published var errorMessage: String = String()
-    @Published var userName: String = String()
-    @Published var userPassword: String = String()
-    @Published var navigate: Bool = false
-    @Published var isPresentingErrorAlert: Bool = false
+    @Published var loginDataModel: LoginDataModel = LoginDataModel()
     private var loginValidation = LoginValidation()
     private var loginResource = LoginResource()
     
     //validate the user inputs
     func validateUserInputs() -> Bool{
         
-        let result = loginValidation.validatieUserInputs(userName: userName, userPassword: userPassword)
+        let result = loginValidation.validatieUserInputs(userName: loginDataModel.userName, userPassword: loginDataModel.userPassword)
         if(result.success == false){
-            errorMessage = result.errorMessage ?? "error occured"
-            isPresentingErrorAlert = true
+            loginDataModel.errorMessage = result.errorMessage ?? "error occured"
+            loginDataModel.isPresentingErrorAlert = true
             return false
         }
         return true
@@ -31,18 +35,19 @@ class LoginViewModel: ObservableObject{
     
     //call the api
     func authenticateUser(){
-        let loginRequest = LoginRequest(userName: userName,userPassword: userPassword)
+        let loginRequest = LoginRequest(userName: loginDataModel.userName,userPassword: loginDataModel.userPassword)
         loginResource.authenticate(loginRequest: loginRequest){ response in
-            if(response?.message == nil){
-                DispatchQueue.main.async {
-                    self.navigate = true
+            
+            DispatchQueue.main.async {
+                self.loginDataModel.navigate = true
+            
+                if(response?.message == nil){
+                  
                 }
-            }
-            else{
-                DispatchQueue.main.async {
-                    self.navigate = false
-                    self.errorMessage = response?.message ?? "Error occured"
-                    self.isPresentingErrorAlert = true
+                else{
+                    self.loginDataModel.navigate = false
+                    self.loginDataModel.errorMessage = response?.message ?? "Error occured"
+                    self.loginDataModel.isPresentingErrorAlert = true
                 }
             }
         }

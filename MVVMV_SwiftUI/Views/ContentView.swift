@@ -12,19 +12,19 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Username", text: $loginViewModel.userName)
-                SecureField("Password", text: $loginViewModel.userPassword)
+                TextField("Username", text: $loginViewModel.loginDataModel.userName)
+                SecureField("Password", text: $loginViewModel.loginDataModel.userPassword)
                 
                     
-                NavigationLink(destination: HomeView(), isActive: $loginViewModel.navigate, label: {
+                NavigationLink(destination: HomeView(), isActive: $loginViewModel.loginDataModel.navigate, label: {
                     Button{
                         if(loginViewModel.validateUserInputs()){
                             loginViewModel.authenticateUser()
                         }
                     } label: {
                         Text("Login")
-                    }.alert(isPresented: $loginViewModel.isPresentingErrorAlert, content: {
-                        Alert(title: Text("Alert"),message: Text(loginViewModel.errorMessage),dismissButton: .cancel(Text("OK")))
+                    }.alert(isPresented: $loginViewModel.loginDataModel.isPresentingErrorAlert, content: {
+                        Alert(title: Text("Alert"),message: Text(loginViewModel.loginDataModel.errorMessage),dismissButton: .cancel(Text("OK")))
                     })
                 })
                 
